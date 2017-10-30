@@ -183,7 +183,7 @@ int main(int argc, char *argv[]) {
 			printf("^");
 			printf("\n");
 			char *cmd = (char*)malloc(100);
-		    fgets(cmd, sizeof(cmd), stdin);
+			fgets(cmd, sizeof(cmd), stdin);
 			if(strcmp(cmd, "\n") != 0) {
 				int break_point = atoi(cmd);
 				brainfuck.break_point = break_point;
