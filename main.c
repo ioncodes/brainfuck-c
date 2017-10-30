@@ -73,8 +73,6 @@ void execute(struct Brainfuck *brainfuck) {
 	switch(instruction) {
 		case '<': brainfuck->mc--; break;
 		case '>': brainfuck->mc++; break;
-		// [ & ] dont work because it will go to the next which is not correct. 
-		// It should go to it's corresponding, but it will enter the nested loop if there's one.
 		case '[': {
 			if(brainfuck->memory[brainfuck->mc] == 0) {
 				int counter = brainfuck->pc;
