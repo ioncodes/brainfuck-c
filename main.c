@@ -78,7 +78,7 @@ void execute(struct Brainfuck *brainfuck) {
 		case '[': {
 			if(brainfuck->memory[brainfuck->mc] == 0) {
 				int counter = brainfuck->pc;
-				int skips = 1; // ignore starting point
+				int skips = -1; // ignore starting point, TODO: verify that this really has to be -1 
 				while(1) { // todo: make for loop
 					if(counter == strlen(brainfuck->code) - 1) {
 						printf("Missing ] at %d", brainfuck->pc);
